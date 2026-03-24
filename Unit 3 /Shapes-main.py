@@ -1,29 +1,21 @@
-
 import shapes
-
-print("1: Circle")
-print("2: Rectangle")
-print("3: Triangle")
-
-pick = input("Select a shape: ")
-
-if pick == '1':
-    val = float(input("Enter radius: "))
-    ans = shapes.area_c(val)
-    print(f"Area is: {ans}")
-
-elif pick == '2':
-    x = float(input("Enter length: "))
-    y = float(input("Enter width: "))
-    ans = shapes.area_r(x, y)
-    print(f"Area is: {ans}")
-
-elif pick == '3':
-    x = float(input("Enter base: "))
-    y = float(input("Enter height: "))
-    ans = shapes.area_t(x, y)
-    print(f"Area is: {ans}")
-
+print("1 : circle")
+print("2 : rectangle")
+print("3 : triangle")
+choice = input("Enter your choice: ")
+if choice == '1':
+    r = float(input("Enter the radius of the circle: "))
+    area = shapes.circle_area(r)
+    print(f"The area of the circle is {area} square units")
+elif choice == '2':
+    l = float(input("Enter length of the rectangle: "))
+    b = float(input("Enter the breadth of the rectangle: "))
+    area = shapes.rectangle_area(l, b)
+    print(f"The area of the rectangle is {area} square units")
+elif choice == '3':
+    l = float(input("Enter the length of the trianlge: "))
+    w = float(input("Enter the width of the triangle: "))
+    area = shapes.triangle_area(l, w)
+    print(f"The area of the triangle is {area} square units")
 else:
-    print("Invalid selection")
-  
+    print("choice invalid")
